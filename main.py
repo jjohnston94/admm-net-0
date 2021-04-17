@@ -24,6 +24,7 @@ if __name__ == '__main__':
   dims = (20, 40)
   m,n = dims
   p = problem.Problem(dims, scen)
+  p.A = np.load('./A.npy')
   # set_trace()
   # number of nonzero entries in each subvector
   s1 = 2
@@ -40,7 +41,7 @@ if __name__ == '__main__':
 
   # number of stages
   # num_stages = 3
-  for num_stages in [1,2,4,5,6]:
+  for num_stages in [1,2,3,4,5,6]:
     dims_list = [(n,m),(m,n),(n,m)]
 
     Ntrain = 10**5
